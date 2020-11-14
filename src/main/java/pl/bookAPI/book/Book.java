@@ -1,10 +1,7 @@
 package pl.bookAPI.book;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.beans.ConstructorProperties;
 
 @Entity

@@ -60,5 +60,15 @@ public class BookController {
         return "redirect:all";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteBook(Model model, @PathVariable long id) {
+        model.addAttribute("book", bookRepository.getBook(id));
+        return "books/delete";
+    }
 
+    @PostMapping("/delete")
+    public String deletingBook(Book book) {
+        bookRepository.deleteBook(book.getId());
+        return "redirect:all";
+    }
 }

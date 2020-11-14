@@ -3,6 +3,7 @@ package pl.bookAPI.repository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import pl.bookAPI.JpaRepository.JpaBookRepository;
 import pl.bookAPI.book.Book;
 import pl.bookAPI.book.BookService;
@@ -10,7 +11,7 @@ import pl.bookAPI.book.BookService;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+@Service
 public class BookRepository implements BookService {
 
     private final JpaBookRepository jpaBookRepository;

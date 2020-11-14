@@ -1,6 +1,8 @@
 package pl.bookAPI.book;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.beans.ConstructorProperties;
 
@@ -12,28 +14,20 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String isbn;
+
+    @NotBlank
     private String title;
+
+    @NotBlank
     private String author;
+
+    @NotBlank
     private String publisher;
+
+    @NotBlank
     private String type;
-
-    public Book() {
-
-    }
-
-    public Book(String isbn, String title, String author, String publisher, String type) {
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
-        this.publisher = publisher;
-        this.type = type;
-    }
-
-    public Book(Long id, String isbn, String title, String author, String publisher, String type) {
-        this(isbn, title, author, publisher, type);
-        this.id = id;
-    }
 
     public Long getId() {
         return id;

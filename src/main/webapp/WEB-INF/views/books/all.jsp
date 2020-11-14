@@ -14,16 +14,20 @@
         <th>author</th>
         <th>publisher</th>
         <th>type</th>
+        <th>edycja</th>
+        <th>usuwanie</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${books}" var="book">
         <tr>
-            <td><c:out value="${book.isbn}"/></td>
-            <td><c:out value="${book.title}"/></td>
-            <td><c:out value="${book.author}"/></td>
-            <td><c:out value="${book.publisher}"/></td>
-            <td><c:out value="${book.type}"/></td>
+            <td>${book.isbn}</td>
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${book.publisher}</td>
+            <td>${book.type}</td>
+            <td><a href="<c:url value="/admin/books/edit/${book.id}"/>">edytuj</a></td>
+            <td><a href="<c:url value="/admin/books/delete/${book.id}"/>">usuń</a></td>
         </tr>
     </c:forEach>
     </tbody>

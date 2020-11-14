@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.bookAPI.book.Book;
@@ -43,4 +44,21 @@ public class BookController {
         bookRepository.addBook(book);
         return "redirect:all";
     }
+
+    @GetMapping("/edit/{id}")
+    public String editBook(Model model, @PathVariable long id) {
+        model.addAttribute("book", bookRepository.getBook(id));
+        return "books/edit";
+    }
+
+    @PostMapping("/edit")
+    public String editingBook(@Valid Book book, BindingResult result) {
+        if (result.hasErrors()) {
+            return "books/edit";
+        }
+        bookRepository.updateBook(book);
+        return "redirect:all";
+    }
+
+
 }

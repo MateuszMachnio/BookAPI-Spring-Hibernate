@@ -4,11 +4,7 @@
 <html>
 <head>
     <title>Add book</title>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/style.css"/>
 </head>
 <body>
 <form:form modelAttribute="book">

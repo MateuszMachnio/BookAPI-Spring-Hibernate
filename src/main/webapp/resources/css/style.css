@@ -1,0 +1,15 @@
+
+table.simpleTable {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+table.simpleTable th, table.simpleTable td {
+    padding: 10px;
+    border: 1px solid darkgray;
+}
+.align {
+    text-align: center;
+}
+.error {
+    color: red;
+}

@@ -3,14 +3,15 @@
 <html>
 <head>
     <title>Book List</title>
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/style.css"/>
 </head>
 <body>
 
-<table border="1">
+<table class="simpleTable">
     <thead>
     <tr>
-        <th>title</th>
-        <th>author</th>
+        <th>tytuł</th>
+        <th>autor</th>
         <th>szczegóły</th>
         <th>edycja</th>
         <th>usuwanie</th>
@@ -21,13 +22,14 @@
         <tr>
             <td>${book.title}</td>
             <td>${book.author}</td>
-            <td><a href="<c:url value="/admin/books/get/${book.id}"/>">szczegóły</a></td>
-            <td><a href="<c:url value="/admin/books/edit/${book.id}"/>">edytuj</a></td>
-            <td><a href="<c:url value="/admin/books/delete/${book.id}"/>">usuń</a></td>
+            <td class="align"><a href="<c:url value="/admin/books/get/${book.id}"/>">szczegóły</a></td>
+            <td class="align"><a href="<c:url value="/admin/books/edit/${book.id}"/>">edytuj</a></td>
+            <td class="align"><a href="<c:url value="/admin/books/delete/${book.id}"/>">usuń</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+<br />
 <button type="button"><a href="<c:url value="/admin/books/add"/>">Dodaj książkę</a></button>
 </body>
 </html>

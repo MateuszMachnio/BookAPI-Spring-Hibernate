@@ -6,6 +6,7 @@
     <title>Book details</title>
 </head>
 <body>
+<h3>Szczegóły książki:</h3>
 <form:form modelAttribute="book">
     <table>
         <tr>

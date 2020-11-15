@@ -34,7 +34,7 @@
     </table>
     <br />
 
-    <form:button value="Anuluj"><a href="<c:url value="/admin/books/all"/>">Powrót</a></form:button>
+    <form:button><a href="<c:url value="/admin/books/all"/>">Powrót</a></form:button>
     <input type="submit" value="Usuń">
 </form:form>
 </body>

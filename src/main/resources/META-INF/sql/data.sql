@@ -1,0 +1,5 @@
+INSERT INTO workshop_hibernate.books (author, isbn, publisher, title, type) VALUES ('J. R. R. Tolkien', '978-83-7785-680-2', 'Allen & Unwin', 'The Lord Of The Rings', 'Fantasy, Adventure');
+INSERT INTO workshop_hibernate.books (author, isbn, publisher, title, type) VALUES ('J. K. Rowling', '0-7475-3269-9', 'Bloomsbury', 'Harry Potter and the Philosopher''s Stone', 'Fantasy');
+INSERT INTO workshop_hibernate.books (author, isbn, publisher, title, type) VALUES ('C. S. Lewis', '9780064404990', 'Geoffrey Bles', 'The Lion, the Witch and the Wardrobe', 'Children''s fantasy, Christian literature');
+INSERT INTO workshop_hibernate.books (author, isbn, publisher, title, type) VALUES ('Emily Bronte', '0-486-29256-8', 'Thomas Cautley Newby', 'Wuthering Heights', 'Tragedy');
+INSERT INTO workshop_hibernate.books (author, isbn, publisher, title, type) VALUES ('Jane Austin', '9780141439518', 'T. Egerton', 'Pride and Prejudice', 'Romance novel');

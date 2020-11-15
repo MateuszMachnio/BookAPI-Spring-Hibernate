@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Book List</title>
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>"/>
 </head>
 <body>
 

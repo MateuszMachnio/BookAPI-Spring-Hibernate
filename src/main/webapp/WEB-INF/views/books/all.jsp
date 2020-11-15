@@ -28,5 +28,6 @@
     </c:forEach>
     </tbody>
 </table>
+<button type="button"><a href="<c:url value="/admin/books/add"/>">Dodaj książkę</a></button>
 </body>
 </html>

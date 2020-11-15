@@ -13,31 +13,39 @@
 <body>
 <h3>Edycja książki</h3>
 <form:form modelAttribute="book" method="post" action="/admin/books/edit">
-    <form:hidden path="id" />
+    <form:hidden path="id"/>
 
-    <form:label path="isbn">ISBN: </form:label>
-    <form:input path="isbn"/>
-    <form:errors path="isbn" element="div" cssClass="error"/>
-    <br />
+    <table>
+        <tr>
+            <td><form:label path="isbn">ISBN: </form:label></td>
+            <td><form:input path="isbn"/></td>
+            <td><form:errors path="isbn" cssClass="error"/></td>
+        </tr>
 
-    <form:label path="title">Tytuł: </form:label>
-    <form:input path="title"/>
-    <form:errors path="title" element="div" cssClass="error"/>
-    <br />
+        <tr>
+            <td><form:label path="title">Tytuł: </form:label></td>
+            <td><form:input path="title"/></td>
+            <td><form:errors path="title" cssClass="error"/></td>
+        </tr>
 
-    <form:label path="author">Autor: </form:label>
-    <form:input path="author"/>
-    <form:errors path="author" element="div" cssClass="error"/>
-    <br />
+        <tr>
+            <td><form:label path="author">Autor: </form:label></td>
+            <td><form:input path="author"/></td>
+            <td><form:errors path="author" cssClass="error"/></td>
+        </tr>
 
-    <form:label path="publisher">Wydawca: </form:label>
-    <form:input path="publisher"/>
-    <form:errors path="publisher" element="div" cssClass="error"/>
-    <br />
+        <tr>
+            <td><form:label path="publisher">Wydawca: </form:label></td>
+            <td><form:input path="publisher"/></td>
+            <td><form:errors path="publisher" cssClass="error"/></td>
+        </tr>
 
-    <form:label path="type">Typ: </form:label>
-    <form:input path="type"/>
-    <form:errors path="type" element="div" cssClass="error"/>
+        <tr>
+            <td><form:label path="type">Typ: </form:label></td>
+            <td><form:input path="type"/></td>
+            <td><form:errors path="type" cssClass="error"/></td>
+        </tr>
+    </table>
     <br />
 
     <form:button value="Anuluj"><a href="<c:url value="/admin/books/all"/>">Powrót</a></form:button>

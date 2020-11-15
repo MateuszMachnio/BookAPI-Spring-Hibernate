@@ -3,9 +3,12 @@ package pl.bookAPI.app;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+
+
 
 public class AppInitializer extends
         AbstractAnnotationConfigDispatcherServletInitializer {
@@ -20,5 +23,9 @@ public class AppInitializer extends
     protected String[] getServletMappings() {
         return new String[]{"/"};   }
 
+    @Override
+    protected Filter[] getServletFilters() {
+        return new Filter[]{new CharacterEncodingFilter("UTF-8", true)};
+    }
 }
 

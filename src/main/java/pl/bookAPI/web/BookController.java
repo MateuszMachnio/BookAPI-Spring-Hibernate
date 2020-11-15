@@ -30,6 +30,12 @@ public class BookController {
         return "books/all";
     }
 
+    @GetMapping("/get/{id}")
+    public String showBook(Model model, @PathVariable long id) {
+        model.addAttribute("book", bookRepository.getBook(id));
+        return "books/showBook";
+    }
+
     @GetMapping("/add")
     public String addBook(Model model) {
         model.addAttribute("book", new Book());

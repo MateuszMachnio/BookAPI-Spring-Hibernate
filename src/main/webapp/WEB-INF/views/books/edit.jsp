@@ -1,5 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Edit book</title>
@@ -38,6 +39,7 @@
     <form:errors path="type" element="div" cssClass="error"/>
     <br />
 
+    <form:button value="Anuluj"><a href="<c:url value="/admin/books/all"/>">Powrót</a></form:button>
     <input type="submit" value="Edytuj">
 </form:form>
 </body>

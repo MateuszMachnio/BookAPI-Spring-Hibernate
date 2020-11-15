@@ -3,13 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Delete book</title>
+    <title>Book details</title>
 </head>
 <body>
-<h3>Czy na pewno chcesz usunąć tą książkę?</h3>
-<form:form modelAttribute="book" method="post" action="/admin/books/delete">
-    <form:hidden path="id" />
-
+<form:form modelAttribute="book">
     <table>
         <tr>
             <td><form:label path="isbn">ISBN: </form:label></td>
@@ -32,10 +29,8 @@
             <td><form:input path="type" disabled="true"/></td>
         </tr>
     </table>
-    <br />
-
-    <form:button value="Anuluj"><a href="<c:url value="/admin/books/all"/>">Powrót</a></form:button>
-    <input type="submit" value="Usuń">
 </form:form>
+
+<button type="button"><a href="<c:url value="/admin/books/all"/>">Powrót</a></button>
 </body>
 </html>

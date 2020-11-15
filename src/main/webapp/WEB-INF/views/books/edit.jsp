@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<h3>Edycja książki</h3>
 <form:form modelAttribute="book" method="post" action="/admin/books/edit">
     <form:hidden path="id" />
 

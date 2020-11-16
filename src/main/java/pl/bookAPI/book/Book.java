@@ -1,5 +1,7 @@
 package pl.bookAPI.book;
 
+import org.hibernate.validator.constraints.ISBN;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -15,6 +17,7 @@ public class Book {
     private Long id;
 
     @NotBlank
+    @ISBN
     private String isbn;
 
     @NotBlank

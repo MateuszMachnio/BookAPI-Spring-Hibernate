@@ -22,7 +22,7 @@ import java.util.Locale;
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.bookAPI")
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "pl.bookAPI.JpaRepository")
+@EnableJpaRepositories(basePackages = "pl.bookAPI.repository")
 public class AppConfig implements WebMvcConfigurer {
 
     @Bean

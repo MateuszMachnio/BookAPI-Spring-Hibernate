@@ -1,7 +1,7 @@
-package pl.bookAPI.repository;
+package pl.bookAPI.service;
 
 import org.springframework.stereotype.Service;
-import pl.bookAPI.JpaRepository.BookRepository;
+import pl.bookAPI.repository.BookRepository;
 import pl.bookAPI.book.Book;
 import pl.bookAPI.book.BookService;
 
